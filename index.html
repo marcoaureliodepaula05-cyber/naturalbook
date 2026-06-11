@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NaturalBook | Conhecimento Natural para uma Vida Mais Saudável</title>
+  <meta name="description" content="Livros físicos e digitais sobre alimentação natural, receitas medicinais, plantas medicinais, saúde preventiva e bem-estar." />
+  <meta property="og:title" content="NaturalBook | Conhecimento Natural para uma Vida Mais Saudável" />
+  <meta property="og:description" content="Uma biblioteca premium dedicada ao conhecimento natural e à saúde através da natureza." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://naturalbook.com.br/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"NaturalBook","slogan":"Conhecimento Natural para uma Vida Mais Saudável","url":"https://naturalbook.com.br/","logo":"assets/logo.png","sameAs":[]}
+  </script>
+</head>
+<body>
+  <div class="topbar">Conteúdo educativo sobre saúde natural. Não substitui orientação médica, nutricional ou terapêutica.</div>
+  <header class="header">
+    <a class="brand" href="#home"><img src="assets/logo.png" alt="NaturalBook"><span>NaturalBook</span></a>
+    <nav class="nav">
+      <a href="#home">Home</a><a href="#livros">Livros</a><a href="#categorias">Categorias</a><a href="#sobre">Sobre Nós</a><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="#contato">Contato</a>
+    </nav>
+    <button class="cart" onclick="openCart()">Carrinho <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Conhecimento Natural para uma Vida Mais Saudável</span>
+        <h1>A Natureza Ensina. Nós Transformamos em Conhecimento.</h1>
+        <p>Descubra livros cuidadosamente selecionados sobre alimentação natural, receitas medicinais e saúde através da sabedoria da natureza.</p>
+        <div class="actions"><a class="btn primary" href="#livros">Conhecer Livros</a><a class="btn secondary" href="#sobre">Nossa História</a></div>
+      </div>
+      <div class="hero-card reveal"><img src="assets/logo.png" alt="Logo NaturalBook"><p>Uma biblioteca premium dedicada à saúde natural, nutrição funcional e bem-estar.</p></div>
+    </section>
+
+    <section class="benefits" id="categorias">
+      <div class="section-title"><span>Benefícios</span><h2>Conhecimento simples, elegante e aplicável</h2></div>
+      <div class="grid four">
+        <article class="card"><b>🌿</b><h3>Alimentação Natural</h3><p>Aprenda como utilizar os alimentos de forma funcional.</p></article>
+        <article class="card"><b>📖</b><h3>Conteúdo Prático</h3><p>Conhecimento simples para aplicar imediatamente.</p></article>
+        <article class="card"><b>🍋</b><h3>Receitas Medicinais</h3><p>Soluções naturais para o dia a dia.</p></article>
+        <article class="card"><b>♡</b><h3>Bem-estar Integral</h3><p>Corpo, mente e qualidade de vida.</p></article>
+      </div>
+    </section>
+
+    <section id="livros" class="products">
+      <div class="section-title"><span>Livros em destaque</span><h2>Curadoria NaturalBook</h2><p>Obras selecionadas para quem deseja aprender, aplicar e transformar hábitos com consciência.</p></div>
+      <div class="grid two">
+        <article class="product"><img src="assets/alimentos.png" alt="Alimentos que Curam"><div><h3>Alimentos que Curam</h3><p>Guia sobre alimentos comuns da cozinha, propriedades nutricionais, receitas práticas e formas de uso para apoiar hábitos alimentares mais saudáveis.</p><ul><li>Editora Lafonte</li><li>256 páginas</li><li>Livro físico</li></ul><strong>R$ 79,90</strong><button onclick="addToCart('Alimentos que Curam',79.90)" class="btn primary">Comprar</button><a href="#produto-alimentos" class="details">Ver detalhes</a></div></article>
+        <article class="product"><img src="assets/curas.png" alt="Curas Naturais de A a Z"><div><h3>Curas Naturais de A a Z</h3><p>Guia prático sobre plantas medicinais, recursos naturais, alimentação saudável e práticas integrativas para consulta no dia a dia.</p><ul><li>Editora Escala</li><li>286 páginas</li><li>Livro físico</li></ul><strong>R$ 89,90</strong><button onclick="addToCart('Curas Naturais de A a Z',89.90)" class="btn primary">Comprar</button><a href="#produto-curas" class="details">Ver detalhes</a></div></article>
+      </div>
+    </section>
+
+    <section class="why" id="sobre">
+      <div class="why-image"><img src="assets/curas-old.jpg" alt="Livros e plantas"></div>
+      <div class="why-copy"><span class="eyebrow">Por que escolher a NaturalBook</span><h2>Mais do que Livros. Uma Fonte de Transformação.</h2><p>Nosso propósito é tornar acessível o conhecimento sobre saúde natural, alimentação equilibrada e bem-estar através de conteúdos cuidadosamente selecionados para quem deseja viver melhor.</p><div class="stats"><div><b>+100</b><span>temas naturais</span></div><div><b>100%</b><span>leitura acessível</span></div><div><b>A-Z</b><span>consulta rápida</span></div></div></div>
+    </section>
+
+    <section class="about-page"><div class="section-title"><span>Institucional</span><h2>Nossa História, Missão, Visão e Valores</h2></div><div class="grid four"><article class="card"><h3>Nossa História</h3><p>Nascemos para conectar pessoas ao conhecimento natural por meio de livros práticos, confiáveis e inspiradores.</p></article><article class="card"><h3>Missão</h3><p>Transformar conteúdos sobre natureza, saúde e alimentação em aprendizado acessível.</p></article><article class="card"><h3>Visão</h3><p>Ser referência em curadoria de livros sobre saúde natural e qualidade de vida.</p></article><article class="card"><h3>Valores</h3><p>Ética, clareza, bem-estar, educação, respeito à natureza e responsabilidade na comunicação.</p></article></div></section>
+
+    <section class="testimonials"><div class="section-title"><span>Depoimentos</span><h2>Leitores que transformaram hábitos</h2></div><div class="grid three"><article class="quote">★★★★★<p>“Conteúdo muito claro e bonito. Me ajudou a organizar melhor minha alimentação.”</p><b>Marina Alves</b><span>São Paulo, SP</span></article><article class="quote">★★★★★<p>“Excelente para consulta no dia a dia. Visual premium e linguagem acessível.”</p><b>Roberto Lima</b><span>Campinas, SP</span></article><article class="quote">★★★★★<p>“A NaturalBook transmite confiança. Comprei para toda a família.”</p><b>Cláudia Mendes</b><span>Curitiba, PR</span></article></div></section>
+
+    <section id="blog" class="blog"><div class="section-title"><span>Blog</span><h2>Conteúdo educativo para viver melhor</h2></div><div class="grid three"><article class="post"><span>Receitas Naturais</span><h3>Como criar uma rotina alimentar mais natural</h3><p>Princípios simples para transformar sua cozinha em fonte de bem-estar.</p></article><article class="post"><span>Plantas Medicinais</span><h3>Ervas tradicionais e uso consciente</h3><p>Conhecimento natural com responsabilidade, clareza e equilíbrio.</p></article><article class="post"><span>Saúde Preventiva</span><h3>Prevenção começa nos hábitos</h3><p>Pequenas escolhas diárias podem favorecer qualidade de vida.</p></article></div></section>
+
+    <section class="newsletter"><h2>Receba conteúdos exclusivos sobre saúde natural.</h2><form><input placeholder="Seu nome"><input placeholder="Seu email"><button class="btn primary">Quero Receber</button></form></section>
+
+    <section class="product-detail" id="produto-alimentos"><h2>Alimentos que Curam</h2><p>Livro físico com 256 páginas, voltado a quem busca compreender as propriedades dos alimentos comuns da mesa brasileira, com informações nutricionais e receitas práticas.</p></section>
+    <section class="product-detail" id="produto-curas"><h2>Curas Naturais de A a Z</h2><p>Guia de consulta sobre plantas medicinais, remédios naturais, alimentação saudável e práticas integrativas, com organização simples para facilitar o aprendizado contínuo.</p></section>
+
+    <section id="faq" class="faq"><div class="section-title"><span>Perguntas Frequentes</span><h2>Dúvidas comuns</h2></div><details><summary>Como recebo meu livro?</summary><p>Livros físicos são enviados ao endereço informado. Livros digitais são enviados por acesso ou link após confirmação de pagamento.</p></details><details><summary>Os livros são físicos ou digitais?</summary><p>A loja está preparada para vender ambos, conforme disponibilidade de cada produto.</p></details><details><summary>Quais formas de pagamento são aceitas?</summary><p>Pix, cartão de crédito e boleto.</p></details><details><summary>Posso solicitar reembolso?</summary><p>Sim, conforme as regras da Política de Cancelamento e Estornos.</p></details><details><summary>O conteúdo substitui orientação profissional?</summary><p>Não. Os conteúdos são educativos e não substituem acompanhamento profissional.</p></details></section>
+
+    <section id="contato" class="contact"><div><span class="eyebrow">Contato</span><h2>Fale com a NaturalBook</h2><p>Envie sua mensagem ou fale pelo WhatsApp.</p></div><form><input placeholder="Nome"><input placeholder="Email"><input placeholder="Telefone"><textarea placeholder="Mensagem"></textarea><button class="btn primary">Enviar Mensagem</button></form></section>
+
+    <section class="policies"><div class="section-title"><span>Políticas</span><h2>Transparência, segurança e responsabilidade</h2></div><div class="grid three"><article class="policy"><h3>Termos de Uso</h3><p>Regras de navegação, compra, responsabilidades do cliente, direitos autorais e uso adequado dos conteúdos educativos.</p></article><article class="policy"><h3>Política de Privacidade</h3><p>Coleta de dados, cookies, segurança da informação, LGPD e direitos do titular.</p></article><article class="policy"><h3>Cancelamento e Estornos</h3><p>Regras para trocas, cancelamentos, reembolso, produtos físicos e licenciamento de produtos digitais.</p></article></div></section>
+  </main>
+
+  <footer><img src="assets/logo.png" alt="NaturalBook"><p>© 2026 NaturalBook. Conhecimento Natural para uma Vida Mais Saudável.</p><a href="#home">Voltar ao topo</a></footer>
+  <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+
+  <dialog id="cartDialog"><h2>Carrinho</h2><div id="cartItems"></div><p class="total">Total: <span id="cartTotal">R$ 0,00</span></p><label><input type="checkbox" id="terms"> Aceito os Termos de Uso e a Política de Privacidade.</label><div class="checkout"><button onclick="checkout()" class="btn primary">Finalizar Compra</button><button onclick="closeCart()" class="btn secondary">Continuar Navegando</button></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
