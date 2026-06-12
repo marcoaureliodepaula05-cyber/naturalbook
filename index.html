@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="policies.css" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"NaturalBook","slogan":"Conhecimento Natural para uma Vida Mais Saudável","url":"https://marcoaureliodepaula05-cyber.github.io/naturalbook/","logo":"assets/logo.png","sameAs":[]}
   </script>
@@ -59,7 +60,7 @@
 
     <section class="why" id="sobre">
       <div class="why-image"><img src="assets/curas-old.jpg" alt="Livros e plantas"></div>
-      <div class="why-copy"><span class="eyebrow">Por que escolher a NaturalBook</span><h2>Mais do que Livros. Uma Fonte de Transformação.</h2><p>Nosso propósito é tornar acessível o conhecimento sobre saúde natural, alimentação equilibrada e bem-estar através de conteúdos cuidadosamente selecionados para quem deseja viver melhor.</p><div class="stats"><div><b>+100</b><span>temas naturais</span></div><div><b>100%</b><span>leitura acessível</span></div><div><b>A-Z</b><span>consulta rápida</span></div></div></div>
+      <div class="why-copy"><span class="eyebrow">Por que escolher a NaturalBook</span><h2>Mais do que Livros. Uma Fonte de Transformação.</h2><p>Somos uma empresa especializada na venda de livros de receitas medicinais, alimentação natural e cuidados com a saúde através da natureza. Nosso objetivo é oferecer conteúdos práticos e acessíveis que ajudam pessoas a adotarem hábitos mais saudáveis, utilizando ingredientes naturais, plantas medicinais e receitas funcionais no dia a dia. Trabalhamos com Livros e Edições cuidadosamente desenvolvidos para promover bem-estar, qualidade de vida e conhecimento sobre soluções naturais para a saúde.</p><div class="stats"><div><b>+100</b><span>temas naturais</span></div><div><b>100%</b><span>leitura acessível</span></div><div><b>A-Z</b><span>consulta rápida</span></div></div></div>
     </section>
 
     <section class="about-page"><div class="section-title"><span>Institucional</span><h2>Nossa História, Missão, Visão e Valores</h2></div><div class="grid four"><article class="card"><h3>Nossa História</h3><p>Nascemos para conectar pessoas ao conhecimento natural por meio de livros práticos, confiáveis e inspiradores.</p></article><article class="card"><h3>Missão</h3><p>Transformar conteúdos sobre natureza, saúde e alimentação em aprendizado acessível.</p></article><article class="card"><h3>Visão</h3><p>Ser referência em curadoria de livros sobre saúde natural e qualidade de vida.</p></article><article class="card"><h3>Valores</h3><p>Ética, clareza, bem-estar, educação, respeito à natureza e responsabilidade na comunicação.</p></article></div></section>
@@ -73,17 +74,224 @@
     <section class="product-detail" id="produto-alimentos"><h2>Alimentos que Curam</h2><p>Livro físico com 256 páginas, voltado a quem busca compreender as propriedades dos alimentos comuns da mesa brasileira, com informações nutricionais e receitas práticas.</p></section>
     <section class="product-detail" id="produto-curas"><h2>Curas Naturais de A a Z</h2><p>Guia de consulta sobre plantas medicinais, remédios naturais, alimentação saudável e práticas integrativas, com organização simples para facilitar o aprendizado contínuo.</p></section>
 
-    <section id="faq" class="faq"><div class="section-title"><span>Perguntas Frequentes</span><h2>Dúvidas comuns</h2></div><details><summary>Como recebo meu livro?</summary><p>Livros físicos são enviados ao endereço informado. Livros digitais são enviados por acesso ou link após confirmação de pagamento.</p></details><details><summary>Os livros são físicos ou digitais?</summary><p>A loja está preparada para vender ambos, conforme disponibilidade de cada produto.</p></details><details><summary>Quais formas de pagamento são aceitas?</summary><p>Pix, cartão de crédito e boleto.</p></details><details><summary>Posso solicitar reembolso?</summary><p>Sim, conforme as regras da Política de Cancelamento e Estornos.</p></details><details><summary>O conteúdo substitui orientação profissional?</summary><p>Não. Os conteúdos são educativos e não substituem acompanhamento profissional.</p></details></section>
+    <section id="faq" class="faq"><div class="section-title"><span>Perguntas Frequentes</span><h2>Dúvidas comuns</h2></div><details><summary>Como recebo meu livro?</summary><p>Livros físicos são enviados ao endereço informado. Livros digitais são enviados por acesso ou link após confirmação de pagamento.</p></details><details><summary>Os livros são físicos ou digitais?</summary><p>A loja está preparada para vender ambos, conforme disponibilidade de cada produto.</p></details><details><summary>Quais formas de pagamento são aceitas?</summary><p>Pix, cartão de crédito e boleto.</p></details><details><summary>Posso solicitar reembolso?</summary><p>Sim, conforme as regras da <a href="#cancelamento">Política de Cancelamento e Estornos</a>.</p></details><details><summary>O conteúdo substitui orientação profissional?</summary><p>Não. Os conteúdos são educativos e não substituem acompanhamento profissional.</p></details></section>
 
-    <section id="contato" class="contact"><div><span class="eyebrow">Contato</span><h2>Fale com a NaturalBook</h2><p>Envie sua mensagem ou fale pelo WhatsApp.</p></div><form><input placeholder="Nome"><input placeholder="Email"><input placeholder="Telefone"><textarea placeholder="Mensagem"></textarea><button class="btn primary">Enviar Mensagem</button></form></section>
+    <section id="contato" class="contact"><div><span class="eyebrow">Contato</span><h2>Fale com a NaturalBook</h2><p>Envie sua mensagem ou fale pelo WhatsApp.</p></div><form id="contactForm" onsubmit="sendContactMessage(event)"><input id="contactName" name="nome" placeholder="Nome" required><input id="contactEmail" name="email" type="email" placeholder="Email" required><input id="contactPhone" name="telefone" placeholder="Telefone"><textarea id="contactMessage" name="mensagem" placeholder="Mensagem" required></textarea><button class="btn primary" type="submit">Enviar Mensagem</button></form></section>
 
-    <section class="policies"><div class="section-title"><span>Políticas</span><h2>Transparência, segurança e responsabilidade</h2></div><div class="grid three"><article class="policy"><h3>Termos de Uso</h3><p>Regras de navegação, compra, responsabilidades do cliente, direitos autorais e uso adequado dos conteúdos educativos.</p></article><article class="policy"><h3>Política de Privacidade</h3><p>Coleta de dados, cookies, segurança da informação, LGPD e direitos do titular.</p></article><article class="policy"><h3>Cancelamento e Estornos</h3><p>Regras para trocas, cancelamentos, reembolso, produtos físicos e licenciamento de produtos digitais.</p></article></div></section>
+    <section class="policies" id="politicas">
+      <div class="section-title">
+        <span>Políticas</span>
+        <h2>Transparência, segurança e responsabilidade</h2>
+        <p>Condições completas de uso, privacidade, cancelamentos e estornos da NaturalBook.</p>
+      </div>
+
+      <div class="policy-stack">
+        <details class="policy policy-full" id="termos">
+          <summary>
+            <span>Condições gerais de uso da plataforma NaturalBook.</span>
+            <h3>Termos de Uso</h3>
+            <p>Última atualização: 11/06/2026</p>
+          </summary>
+
+          <div class="policy-content">
+          <ol>
+            <li>
+              <h4>Aceitação dos Termos</h4>
+              <p>Ao acessar e utilizar o site NaturalBook, você concorda com os termos e condições aqui descritos. Caso não concorde com qualquer disposição, recomendamos não utilizar nossos serviços.</p>
+            </li>
+            <li>
+              <h4>Objeto</h4>
+              <p>A NaturalBook é uma empresa que comercializa livros digitais e conteúdos educacionais relacionados à saúde natural, alimentação consciente, fitoterapia, plantas medicinais e bem-estar.</p>
+            </li>
+            <li>
+              <h4>Cadastro e Conta</h4>
+              <p>Para realizar compras, o usuário deve fornecer informações verdadeiras, completas e atualizadas. É responsabilidade do usuário manter a confidencialidade das credenciais de acesso.</p>
+            </li>
+            <li>
+              <h4>Propriedade Intelectual</h4>
+              <p>Todo o conteúdo disponibilizado — livros, textos, imagens, logotipos, ilustrações — é protegido por direitos autorais e pertence à NaturalBook ou aos seus respectivos titulares.</p>
+              <ul>
+                <li>É vedada a reprodução, distribuição, venda, modificação ou utilização comercial sem autorização expressa.</li>
+                <li>O acesso aos livros é pessoal e intransferível.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Pagamento e Entrega</h4>
+              <p>Os pagamentos são processados por gateways terceirizados certificados. Após a confirmação do pagamento, o acesso ao conteúdo digital é liberado por e-mail em até alguns minutos.</p>
+            </li>
+            <li>
+              <h4>Natureza Educacional do Conteúdo</h4>
+              <p>O conteúdo dos livros tem caráter exclusivamente informativo e educacional. Não substitui consulta, diagnóstico ou tratamento médico profissional. O usuário declara compreender que decisões de saúde devem ser tomadas com acompanhamento profissional.</p>
+            </li>
+            <li>
+              <h4>Limitação de Responsabilidade</h4>
+              <p>A NaturalBook não se responsabiliza por interpretações equivocadas do conteúdo, pela utilização inadequada das informações ou por resultados individuais decorrentes da aplicação prática do material.</p>
+            </li>
+            <li>
+              <h4>Cancelamento e Reembolso</h4>
+              <p>O usuário pode solicitar reembolso conforme nossa <a href="#cancelamento">Política de Cancelamento e Estornos</a>, observando o prazo legal de arrependimento.</p>
+            </li>
+            <li>
+              <h4>Alterações</h4>
+              <p>A NaturalBook se reserva o direito de alterar estes Termos a qualquer momento, sendo a versão atualizada publicada nesta página.</p>
+            </li>
+            <li>
+              <h4>Foro</h4>
+              <p>Para dirimir quaisquer controvérsias decorrentes destes Termos, fica eleito o foro da comarca da sede da empresa, com renúncia a qualquer outro.</p>
+            </li>
+            <li>
+              <h4>Contato</h4>
+              <p>Em caso de dúvidas, entre em contato pelo e-mail <a href="mailto:contato@naturalbook.com.br">contato@naturalbook.com.br</a>.</p>
+            </li>
+          </ol>
+          </div>
+        </details>
+
+        <details class="policy policy-full" id="privacidade">
+          <summary>
+            <span>Compromisso com a transparência e a proteção dos seus dados pessoais — em conformidade com a LGPD (Lei nº 13.709/2018).</span>
+            <h3>Política de Privacidade</h3>
+            <p>Última atualização: 11/06/2026</p>
+          </summary>
+
+          <div class="policy-content">
+          <ol>
+            <li>
+              <h4>Quais dados coletamos</h4>
+              <ul>
+                <li><strong>Dados cadastrais:</strong> nome, e-mail, telefone, CPF (quando necessário para emissão de nota fiscal).</li>
+                <li><strong>Dados de navegação:</strong> endereço IP, dispositivo, navegador, páginas visitadas, tempo de permanência.</li>
+                <li><strong>Dados de pagamento:</strong> processados diretamente pelos gateways (Stripe, Mercado Pago, Hotmart, Eduzz, Kiwify). Não armazenamos dados de cartão.</li>
+                <li><strong>Cookies:</strong> utilizados para melhorar a experiência, lembrar preferências e medir desempenho.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Como utilizamos seus dados</h4>
+              <ul>
+                <li>Processar compras e disponibilizar acesso aos produtos digitais.</li>
+                <li>Enviar comunicações transacionais (confirmação de compra, acesso, suporte).</li>
+                <li>Enviar comunicações de marketing, mediante seu consentimento, com a opção de descadastro a qualquer momento.</li>
+                <li>Melhorar a experiência no site, identificar problemas técnicos e produzir estatísticas agregadas.</li>
+                <li>Cumprir obrigações legais e regulatórias.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Bases legais</h4>
+              <p>O tratamento de dados ocorre com base em: execução de contrato, cumprimento de obrigação legal, legítimo interesse e consentimento, conforme o caso.</p>
+            </li>
+            <li>
+              <h4>Compartilhamento com terceiros</h4>
+              <p>Compartilhamos dados estritamente necessários com:</p>
+              <ul>
+                <li>Plataformas de pagamento e antifraude.</li>
+                <li>Ferramentas de marketing e analytics (Google Analytics 4, Google Tag Manager, Meta Pixel, RD Station).</li>
+                <li>Serviços de e-mail transacional.</li>
+                <li>Autoridades competentes, quando legalmente exigido.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Cookies</h4>
+              <p>Utilizamos cookies próprios e de terceiros para funcionamento essencial, análise de uso e marketing. Você pode gerenciar suas preferências diretamente no navegador.</p>
+            </li>
+            <li>
+              <h4>Direitos do titular (LGPD)</h4>
+              <ul>
+                <li>Confirmação da existência de tratamento;</li>
+                <li>Acesso, correção, anonimização, bloqueio ou eliminação dos dados;</li>
+                <li>Portabilidade;</li>
+                <li>Informação sobre compartilhamento;</li>
+                <li>Revogação do consentimento.</li>
+              </ul>
+              <p>Para exercer seus direitos, envie um e-mail para <a href="mailto:privacidade@naturalbook.com.br">privacidade@naturalbook.com.br</a>.</p>
+            </li>
+            <li>
+              <h4>Segurança</h4>
+              <p>Adotamos medidas técnicas e organizacionais para proteger os dados contra acessos não autorizados, perda, alteração ou destruição.</p>
+            </li>
+            <li>
+              <h4>Retenção</h4>
+              <p>Mantemos os dados pelo período necessário ao cumprimento das finalidades e das obrigações legais aplicáveis.</p>
+            </li>
+            <li>
+              <h4>Encarregado (DPO)</h4>
+              <p>Em conformidade com a LGPD, nosso encarregado pode ser contatado por <a href="mailto:dpo@naturalbook.com.br">dpo@naturalbook.com.br</a>.</p>
+            </li>
+            <li>
+              <h4>Atualizações</h4>
+              <p>Esta política pode ser atualizada. A versão vigente estará sempre disponível nesta página.</p>
+            </li>
+          </ol>
+          </div>
+        </details>
+
+        <details class="policy policy-full" id="cancelamento">
+          <summary>
+            <span>Nosso compromisso com a sua confiança — política transparente e em conformidade com o CDC.</span>
+            <h3>Cancelamento e Estornos</h3>
+            <p>Última atualização: 11/06/2026</p>
+          </summary>
+
+          <div class="policy-content">
+          <ol>
+            <li>
+              <h4>Direito de Arrependimento</h4>
+              <p>Em conformidade com o art. 49 do Código de Defesa do Consumidor (Lei nº 8.078/1990), o consumidor pode desistir da compra realizada fora do estabelecimento comercial no prazo de 7 (sete) dias corridos, contados a partir da data de recebimento do produto ou da liberação do acesso ao conteúdo digital.</p>
+            </li>
+            <li>
+              <h4>Como solicitar o cancelamento</h4>
+              <ul>
+                <li>Envie um e-mail para <a href="mailto:contato@naturalbook.com.br">contato@naturalbook.com.br</a> com o assunto "Solicitação de Reembolso".</li>
+                <li>Informe seu nome completo, e-mail utilizado na compra, número do pedido e o motivo do cancelamento (opcional).</li>
+                <li>Você receberá uma confirmação em até 24 horas úteis.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Prazo de análise</h4>
+              <p>A solicitação será analisada em até 2 (dois) dias úteis. Aprovada, a ordem de estorno será encaminhada ao gateway de pagamento utilizado.</p>
+            </li>
+            <li>
+              <h4>Prazo de reembolso</h4>
+              <ul>
+                <li><strong>Cartão de crédito:</strong> o estorno aparece em até 2 faturas, conforme a operadora.</li>
+                <li><strong>Pix:</strong> em até 5 dias úteis na conta de origem.</li>
+                <li><strong>Boleto:</strong> em até 10 dias úteis, mediante envio dos dados bancários para depósito.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Produtos digitais</h4>
+              <p>Os livros digitais e materiais eletrônicos seguem o prazo legal de 7 dias para arrependimento. Após esse período, não há devolução, salvo em caso de defeito no arquivo ou impossibilidade comprovada de acesso por falha do fornecedor.</p>
+            </li>
+            <li>
+              <h4>Produtos físicos</h4>
+              <p>Caso a NaturalBook ofereça versões impressas, a devolução observará o prazo de 7 dias do recebimento, e o produto deverá retornar em sua embalagem original, sem indícios de uso. Os custos de postagem para devolução são por nossa conta quando a desistência for amparada pelo CDC.</p>
+            </li>
+            <li>
+              <h4>Não cumprimento do prazo de arrependimento</h4>
+              <p>Após o prazo legal, eventuais reembolsos serão avaliados caso a caso, mediante análise de excepcionalidade e boa-fé.</p>
+            </li>
+            <li>
+              <h4>Canais de atendimento</h4>
+              <ul>
+                <li>E-mail: <a href="mailto:contato@naturalbook.com.br">contato@naturalbook.com.br</a></li>
+                <li>WhatsApp: +55 (00) 00000-0000</li>
+                <li>Horário: Segunda a Sexta, das 9h às 18h (exceto feriados).</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Disposições finais</h4>
+              <p>Esta política poderá ser atualizada a qualquer momento, sendo a versão vigente sempre publicada nesta página.</p>
+            </li>
+          </ol>
+          </div>
+        </details>
+      </div>
+    </section>
   </main>
 
   <footer><img src="assets/logo.png" alt="NaturalBook"><p>© 2026 NaturalBook. Conhecimento Natural para uma Vida Mais Saudável.</p><a href="#home">Voltar ao topo</a></footer>
   <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
 
-  <dialog id="cartDialog"><h2>Carrinho</h2><div id="cartItems"></div><p class="total">Total: <span id="cartTotal">R$ 0,00</span></p><label><input type="checkbox" id="terms"> Aceito os Termos de Uso e a Política de Privacidade.</label><div class="checkout"><button onclick="checkout()" class="btn primary">Finalizar Compra</button><button onclick="closeCart()" class="btn secondary">Continuar Navegando</button></div></dialog>
+  <dialog id="cartDialog"><h2>Carrinho</h2><div id="cartItems"></div><p class="total">Total: <span id="cartTotal">R$ 0,00</span></p><label><input type="checkbox" id="terms"> Aceito os <a href="#termos">Termos de Uso</a> e a <a href="#privacidade">Política de Privacidade</a>.</label><div class="checkout"><button onclick="checkout()" class="btn primary">Finalizar Compra</button><button onclick="closeCart()" class="btn secondary">Continuar Navegando</button></div></dialog>
   <script src="script.js"></script>
 </body>
 </html>

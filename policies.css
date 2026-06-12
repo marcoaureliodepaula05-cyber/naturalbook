@@ -1,0 +1,154 @@
+.policy-full a,
+.faq a,
+dialog a {
+  color: var(--dark);
+  font-weight: 800;
+}
+
+.policy-stack {
+  display: grid;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.policy-full {
+  overflow: hidden;
+  padding: 0;
+  scroll-margin-top: 110px;
+}
+
+.policy-full summary {
+  cursor: pointer;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding: 28px 72px 28px 28px;
+  position: relative;
+}
+
+.policy-full summary::-webkit-details-marker {
+  display: none;
+}
+
+.policy-full summary::after {
+  align-items: center;
+  background: var(--dark);
+  border-radius: 50%;
+  color: #fff;
+  content: "+";
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  height: 38px;
+  justify-content: center;
+  position: absolute;
+  right: 24px;
+  top: 28px;
+  width: 38px;
+}
+
+.policy-full[open] summary::after {
+  content: "-";
+}
+
+.policy-full summary:hover,
+.policy-full summary:focus {
+  background: #fbfaf6;
+  outline: none;
+}
+
+.policy-full summary:focus-visible {
+  box-shadow: inset 0 0 0 3px rgba(78, 138, 42, .28);
+}
+
+.policy-full[open] summary {
+  border-bottom: 1px solid #e8dfcf;
+}
+
+.policy-full summary span {
+  display: block;
+  color: var(--nature);
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.policy-full summary h3 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 0;
+}
+
+.policy-full summary p {
+  color: #59604f;
+  font-weight: 700;
+  margin: 0;
+}
+
+.policy-content {
+  padding: 24px 28px 28px;
+}
+
+.policy-full ol {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.policy-full li::marker {
+  color: var(--nature);
+  font-weight: 800;
+}
+
+.policy-full h4 {
+  color: var(--dark);
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.policy-full p,
+.policy-full li,
+.policy-full ul {
+  color: #4d554a;
+  line-height: 1.75;
+}
+
+.policy-full p {
+  margin: 0;
+}
+
+.policy-full ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.policy-full strong {
+  color: var(--dark);
+}
+
+@media (max-width: 620px) {
+  .policy-full {
+    scroll-margin-top: 88px;
+  }
+
+  .policy-full summary {
+    padding: 22px 62px 22px 22px;
+  }
+
+  .policy-full summary::after {
+    height: 34px;
+    right: 18px;
+    top: 24px;
+    width: 34px;
+  }
+
+  .policy-content {
+    padding: 20px 22px 22px;
+  }
+}
