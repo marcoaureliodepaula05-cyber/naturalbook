@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://marcoaureliodepaula05-cyber.github.io/naturalbook/sitemap.xml
+Sitemap: https://www.naturalbook.com.br/sitemap.xml
